@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar & Masuk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
+</head>
+<body>
+    <div class="container" id="signup" style="display:none;">
+      <h1 class="form-title">Daftar</h1>
+      <form method="post" action="">
+        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+        <div class="input-group">
+           <i class="fas fa-user"></i>
+           <input type="text" id="fName" placeholder="Nama Depan" required>
+           <label for="fname">Nama Depan</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="lName" placeholder="Nama Belakang" required>
+            <label for="lName">Nama Belakang</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="rEmail" placeholder="Email" required>
+            <label for="rEmail">Email</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="rPassword" placeholder="Kata Sandi" required>
+            <label for="rPassword">Kata Sandi</label>
+        </div>
+       <button class="btn" id="submitSignUp">Daftar</button>
+      </form>
+      <p class="or">
+        ----------atau--------
+      </p>
+      <div class="icons">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+      <div class="links">
+        <p>Sudah Punya Akun?</p>
+        <button id="signInButton">Masuk</button>
+      </div>
+    </div>
+
+  <div class="container" id="signIn">
+        <h1 class="form-title">Log In</h1>
+        <form method="post" action="">
+          <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+
+          <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="Email" required>
+              <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Kata Sandi" required>
+              <label for="password">Kata Sandi</label>
+          </div>
+          <p class="recover">
+            <a href="#">Pulihkan Kata Sandi</a>
+          </p>
+         <button class="btn" id="submitSignIn">Masuk</button>
+        </form>
+        <p class="or">
+          ----------atau--------
+        </p>
+        <div class="icons">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+        <div class="links">
+          <p>Belum punya akun?</p>
+          <button id="signUpButton">Daftar</button>
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
